@@ -5,7 +5,7 @@ class UI_Comp_Formulario{
   public function UI_Comp_Formulario($validateScript=false){
     if($validateScript){
       $retorno ='';
-      $retorno.= ValidationDate::validationDateFormat( $validateScript['date']) ? '' : 'Data inválida, verifique. <br/>';    
+      $retorno.= ValidationDate::validationDateFormat( $validateScript['date']) ? 'Data inválida, verifique. <br/>' : '';    
         
       $retorno.= strlen($validateScript['text']) >144 ?
          'Campo de texto maior que o máximo permitido,verifique.<br/>' : '';
